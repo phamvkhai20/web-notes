@@ -1,0 +1,271 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+.note-add-button {
+  position: absolute;
+  z-index: 10000;
+  transform: scale(0);
+  transition: transform 0.2s ease;
+}
+
+.note-add-button.show {
+  transform: scale(1);
+}
+
+.note-popup {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.note-popup svg {
+  color: #666;
+}
+
+.note-popup img {
+  filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.5));
+}
+
+#noteInput {
+  width: 300px;
+  max-width: 300px;
+  min-height: 250px;
+  margin-bottom: 10px;
+  resize: vertical;
+}
+
+#domain {
+  margin: 0;
+  color: #333;
+  font-size: 16px;
+}
+
+.login-button {
+  background-color: #4285f4;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.user-info {
+  display: none;
+  align-items: center;
+  gap: 8px;
+}
+
+.user-info img {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+}
+
+.domain-section {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+#favicon {
+  width: 16px;
+  height: 16px;
+}
+
+.tabs {
+  display: flex;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 10px;
+}
+
+.tab-btn {
+  padding: 8px 16px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+.tab-btn.active {
+  opacity: 1;
+  border-bottom: 2px solid #4285f4;
+}
+
+.tab-pane {
+  display: none;
+}
+
+.tab-pane.active {
+  display: block;
+}
+
+.copy-history {
+  max-height: 250px;
+  overflow-y: auto;
+  padding-right: 4px;
+}
+
+/* Custom scrollbar styles */
+.copy-history::-webkit-scrollbar {
+  width: 6px;
+}
+
+.copy-history::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 3px;
+}
+
+.copy-history::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 3px;
+}
+
+.copy-history::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}
+.history-item {
+  padding: 8px;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.history-text {
+  flex: 1;
+  margin-right: 8px;
+  word-break: break-word;
+}
+
+.copy-btn {
+  padding: 6px;
+  background: transparent;
+  color: #4285f4;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.copy-btn:hover {
+  background: rgba(66, 133, 244, 0.1);
+}
+.history-actions {
+  display: flex;
+  gap: 4px;
+}
+
+.delete-btn {
+  padding: 6px;
+  background: transparent;
+  color: #dc3545;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.delete-btn:hover {
+  background: rgba(220, 53, 69, 0.1);
+}
+/* Tools styles */
+.tools-container {
+  padding: 10px;
+}
+
+.tool-group {
+  margin-bottom: 15px;
+  padding: 10px;
+  border: 1px solid #eee;
+  border-radius: 4px;
+}
+
+.tool-group h3 {
+  margin: 0 0 10px 0;
+  font-size: 14px;
+  color: #666;
+}
+
+.tool-select {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tool-input {
+  max-width: 240px !important;
+  width: 100%;
+  padding: 8px;
+  min-height: 80px;
+  margin-bottom: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tool-button {
+  background: #4285f4;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 8px;
+  font-size: 12px;
+}
+
+.tool-button:hover {
+  background: #3367d6;
+}
+.domain-section {
+  margin-bottom: 10px;
+}
+
+.domain-select {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: white;
+  font-size: 14px;
+  color: #333;
+}
+
+.domain-select option {
+  padding: 8px;
+}
+
+.domain-select option:before {
+  content: "";
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+.button-group {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.button-group .tool-button {
+  flex: 1;
+  min-width: 80px;
+}
+
+#jsonInput {
+  margin-bottom: 8px;
+}

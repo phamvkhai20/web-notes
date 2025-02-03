@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        body {
+            width: 300px;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <div class="auth-section">
+    <button id="loginButton" class="login-button">Login with Google</button>
+    <div id="userInfo" class="user-info">
+      <img id="userAvatar" src="" alt="User avatar">
+      <span id="userName"></span>
+    </div>
+  </div> -->
+    <div class="domain-section">
+        <select id="domainSelect" class="domain-select">
+            <option value="">Loading domains...</option>
+        </select>
+    </div>
+    <div class="tabs">
+        <button class="tab-btn active" data-tab="notes">Notes</button>
+        <button class="tab-btn" data-tab="history">Copy History</button>
+        <button class="tab-btn" data-tab="tools">Tools</button>
+    </div>
+    <div class="tab-content">
+        <div id="notes" class="tab-pane active">
+            <textarea id="noteInput" placeholder="Enter your notes here..."></textarea>
+        </div>
+        <div id="history" class="tab-pane">
+            <div id="copyHistory" class="copy-history"></div>
+        </div>
+        <div id="tools" class="tab-pane">
+            <div class="tools-container">
+                <div class="tool-group">
+                    <h3>Text Transform</h3>
+                    <select id="textTransform" class="tool-select">
+                        <option value="camelCase">camelCase</option>
+                        <option value="snakeCase">snake_case</option>
+                        <option value="kebabCase">kebab-case</option>
+                        <option value="pascalCase">PascalCase</option>
+                    </select>
+                    <textarea id="transformInput" class="tool-input"
+                        placeholder="Enter text to transform..."></textarea>
+                    <button id="transformBtn" class="tool-button">Transform</button>
+                </div>
+                <div class="tool-group">
+                    <h3>JSON</h3>
+                    <button id="formatJsonBtn" class="tool-button">Format JSON</button>
+                    <button id="minifyJsonBtn" class="tool-button">Minify JSON</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- <script src="js/auth.js"></script> -->
+    <script src="js/popup.js"></script>
+</body>
+
+</html>

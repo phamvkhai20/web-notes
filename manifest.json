@@ -1,0 +1,52 @@
+{
+    "manifest_version": 3,
+    "name": "Web Notes",
+    "version": "1.0",
+    "description": "Save notes for websites with text selection feature",
+    "permissions": [
+        "storage",
+        "activeTab",
+        "scripting"
+    ],
+    "icons": {
+        "16": "icons/notes.png",
+        "32": "icons/notes.png",
+        "48": "icons/notes.png",
+        "128": "icons/notes.png"
+    },
+    "action": {
+        "default_icon": {
+            "16": "icons/notes.png",
+            "32": "icons/notes.png",
+            "48": "icons/notes.png",
+            "128": "icons/notes.png"
+        },
+        "default_popup": "popup.html"
+    },
+    "background": {
+        "service_worker": "background.js"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "js": [
+                "js/content.js"
+            ],
+            "css": [
+                "css/styles.css"
+            ]
+        }
+    ],
+    "web_accessible_resources": [
+        {
+            "resources": [
+                "icons/*"
+            ],
+            "matches": [
+                "<all_urls>"
+            ]
+        }
+    ]
+}
